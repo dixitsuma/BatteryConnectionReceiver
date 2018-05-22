@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user3.batteryconnectionreceiver.MainActivity">
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="20dp">
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Battery Level :"
+          android:textColor="#000"
+          android:paddingRight="10dp"/>
+
+      <TextView
+          android:id="@+id/tv_battery_level"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="40"
+          android:textColor="#000"
+          android:paddingRight="100dp" />
+
+      <TextView
+          android:id="@+id/tv_battery_status"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="#000"
+          android:text="Charging"
+          android:paddingRight="40dp"/>
+
+      <ImageView
+          android:id="@+id/iv_flight"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+
+
+  </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:max="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_send_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send broadcast"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal" />
+
+
+    <EditText
+        android:id="@+id/et_entered_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter the message to be sent "/>
+
+    <TextView
+        android:id="@+id/tv_broadcast_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:hint="Received Broadcast here : "/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start service"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="startService"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop service"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="stopService"/>
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next"
+        android:layout_gravity="right"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        />
+</LinearLayout>
